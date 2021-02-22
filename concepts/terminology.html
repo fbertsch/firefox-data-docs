@@ -1,884 +1,394 @@
-
 <!DOCTYPE HTML>
-<html lang="" >
+<html lang="en" class="sidebar-visible no-js light">
     <head>
+        <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
+        <title>Terminology - Mozilla Data Documentation</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Terminology · GitBook</title>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.2">
-        
-        
-        
-    
-    <link rel="stylesheet" href="../gitbook/style.css">
-
-    
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
-                
-            
-        
-
-    
-
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
 
         
-    
-    
-    <meta name="HandheldFriendly" content="true"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
-    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="../favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="../favicon.png">
+        
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        
 
-    
-    <link rel="next" href="getting_started.html" />
-    
-    
-    <link rel="prev" href="../" />
-    
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        
 
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+        <link rel="stylesheet" href="../dtmo.css">
+        
+        <link rel="stylesheet" href="../mermaid.css">
+        
+
+        
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
     </head>
     <body>
-        
-<div class="book">
-    <div class="book-summary">
-        
-            
-<div id="book-search-input" role="search">
-    <input type="text" placeholder="Type to search" />
-</div>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
 
-            
-                <nav role="navigation">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../introduction.html">Mozilla Data Documentation</a></li><li class="chapter-item expanded "><a href="../concepts/getting_started.html"><strong aria-hidden="true">1.</strong> Getting Started</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../concepts/terminology.html" class="active"><strong aria-hidden="true">1.1.</strong> Terminology</a></li><li class="chapter-item expanded "><a href="../concepts/gaining_access.html"><strong aria-hidden="true">1.2.</strong> Gaining Access</a></li><li class="chapter-item expanded "><a href="../concepts/analysis_intro.html"><strong aria-hidden="true">1.3.</strong> Analysis Quick Start</a></li><li class="chapter-item expanded "><a href="../tools/interfaces.html"><strong aria-hidden="true">1.4.</strong> Tools for Data Analysis</a></li><li class="chapter-item expanded "><a href="../concepts/analysis_gotchas.html"><strong aria-hidden="true">1.5.</strong> Common Analysis Gotchas</a></li><li class="chapter-item expanded "><a href="../concepts/choosing_a_dataset.html"><strong aria-hidden="true">1.6.</strong> Choosing a Desktop Dataset</a></li><li class="chapter-item expanded "><a href="../concepts/choosing_a_dataset_mobile.html"><strong aria-hidden="true">1.7.</strong> Choosing a Mobile Dataset</a></li><li class="chapter-item expanded "><a href="../concepts/getting_help.html"><strong aria-hidden="true">1.8.</strong> Getting Help</a></li><li class="chapter-item expanded "><a href="../concepts/reporting_a_problem.html"><strong aria-hidden="true">1.9.</strong> Reporting a problem</a></li></ol></li><li class="chapter-item expanded "><a href="../metrics/index.html"><strong aria-hidden="true">2.</strong> Metrics</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../metrics/definitions.html"><strong aria-hidden="true">2.1.</strong> Definitions</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../metrics/metrics.html"><strong aria-hidden="true">2.1.1.</strong> Metrics</a></li><li class="chapter-item expanded "><a href="../metrics/usage.html"><strong aria-hidden="true">2.1.2.</strong> Usage Criteria</a></li><li class="chapter-item expanded "><a href="../metrics/dimensions.html"><strong aria-hidden="true">2.1.3.</strong> Slicing Dimensions</a></li></ol></li><li class="chapter-item expanded "><a href="../metrics/policy.html"><strong aria-hidden="true">2.2.</strong> Metrics Standardization and Policy</a></li></ol></li><li class="chapter-item expanded "><a href="../cookbooks/index.html"><strong aria-hidden="true">3.</strong> Tutorials &amp; Cookbooks</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../cookbooks/analysis/index.html"><strong aria-hidden="true">3.1.</strong> Analysis</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../cookbooks/public_data.html"><strong aria-hidden="true">3.1.1.</strong> Accessing Public Data</a></li><li class="chapter-item expanded "><a href="../cookbooks/bigquery.html"><strong aria-hidden="true">3.1.2.</strong> Accessing and working with BigQuery</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../cookbooks/bigquery/access.html"><strong aria-hidden="true">3.1.2.1.</strong> Access</a></li><li class="chapter-item expanded "><a href="../cookbooks/bigquery/querying.html"><strong aria-hidden="true">3.1.2.2.</strong> Writing Queries</a></li><li class="chapter-item expanded "><a href="../cookbooks/bigquery/optimization.html"><strong aria-hidden="true">3.1.2.3.</strong> Optimization</a></li><li class="chapter-item expanded "><a href="../tools/spark.html"><strong aria-hidden="true">3.1.2.4.</strong> Custom analysis with Spark</a></li></ol></li><li class="chapter-item expanded "><a href="../tools/stmo.html"><strong aria-hidden="true">3.1.3.</strong> Introduction to STMO</a></li><li class="chapter-item expanded "><a href="../concepts/glean/accessing_glean_data.html"><strong aria-hidden="true">3.1.4.</strong> Accessing Glean data</a></li><li class="chapter-item expanded "><a href="../cookbooks/dataset_specific.html"><strong aria-hidden="true">3.1.5.</strong> Dataset-Specific</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../cookbooks/normandy_events.html"><strong aria-hidden="true">3.1.5.1.</strong> Working with Normandy events</a></li><li class="chapter-item expanded "><a href="../cookbooks/crash_pings.html"><strong aria-hidden="true">3.1.5.2.</strong> Working with Crash Pings</a></li><li class="chapter-item expanded "><a href="../cookbooks/clients_last_seen_bits.html"><strong aria-hidden="true">3.1.5.3.</strong> Working with Bit Patterns in Clients Last Seen</a></li><li class="chapter-item expanded "><a href="../cookbooks/main_ping_exponential_histograms.html"><strong aria-hidden="true">3.1.5.4.</strong> Visualizing Percentiles of an Main Ping Exponential Histogram</a></li></ol></li><li class="chapter-item expanded "><a href="../cookbooks/realtime.html"><strong aria-hidden="true">3.1.6.</strong> Real-time</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../cookbooks/view_pings_cep.html"><strong aria-hidden="true">3.1.6.1.</strong> Seeing Your Own Pings</a></li></ol></li><li class="chapter-item expanded "><a href="../cookbooks/metrics.html"><strong aria-hidden="true">3.1.7.</strong> Metrics</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../cookbooks/dau.html"><strong aria-hidden="true">3.1.7.1.</strong> Daily Active Users (DAU and MAU)</a></li><li class="chapter-item expanded "><a href="../cookbooks/active_dau.html"><strong aria-hidden="true">3.1.7.2.</strong> Active DAU (aDAU)</a></li><li class="chapter-item expanded "><a href="../cookbooks/retention.html"><strong aria-hidden="true">3.1.7.3.</strong> Retention</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../cookbooks/operational/index.html"><strong aria-hidden="true">3.2.</strong> Operational</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../cookbooks/gcp-projects.html"><strong aria-hidden="true">3.2.1.</strong> Creating a Prototype Data Project on Google Cloud Platform</a></li><li class="chapter-item expanded "><a href="../cookbooks/operational/protosaur.html"><strong aria-hidden="true">3.2.2.</strong> Creating Static Dashboards with Protosaur</a></li><li class="chapter-item expanded "><a href="../cookbooks/bigquery-airflow.html"><strong aria-hidden="true">3.2.3.</strong> Scheduling BigQuery Queries in Airflow</a></li><li class="chapter-item expanded "><a href="../cookbooks/deploying-containers.html"><strong aria-hidden="true">3.2.4.</strong> Building and Deploying Containers to GCR with CircleCI</a></li><li class="chapter-item expanded "><a href="../cookbooks/publishing_datasets.html"><strong aria-hidden="true">3.2.5.</strong> Publishing Datasets</a></li></ol></li><li class="chapter-item expanded "><a href="../datasets/new_data.html"><strong aria-hidden="true">3.3.</strong> Sending telemetry</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../cookbooks/client_guidelines.html"><strong aria-hidden="true">3.3.1.</strong> Implementing Experiments</a></li><li class="chapter-item expanded "><a href="../cookbooks/events_best_practices.html"><strong aria-hidden="true">3.3.2.</strong> Sending Events</a></li><li class="chapter-item expanded "><a href="../cookbooks/new_ping.html"><strong aria-hidden="true">3.3.3.</strong> Sending a Custom Ping</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../reference/index.html"><strong aria-hidden="true">4.</strong> Data Platform Reference</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../tools/guiding_principles.html"><strong aria-hidden="true">4.1.</strong> Guiding Principles for Data Infrastructure</a></li><li class="chapter-item expanded "><a href="../concepts/glean/glean.html"><strong aria-hidden="true">4.2.</strong> Glean overview</a></li><li class="chapter-item expanded "><a href="../concepts/pipeline/gcp_data_pipeline.html"><strong aria-hidden="true">4.3.</strong> Overview of Mozilla's Data Pipeline</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../concepts/pipeline/http_edge_spec.html"><strong aria-hidden="true">4.3.1.</strong> HTTP Edge Server Specification</a></li><li class="chapter-item expanded "><a href="../concepts/pipeline/event_pipeline.html"><strong aria-hidden="true">4.3.2.</strong> Event Pipeline Detail</a></li><li class="chapter-item expanded "><a href="../concepts/pipeline/schemas.html"><strong aria-hidden="true">4.3.3.</strong> Schemas</a></li><li class="chapter-item expanded "><a href="../concepts/channels/channel_normalization.html"><strong aria-hidden="true">4.3.4.</strong> Channel Normalization</a></li><li class="chapter-item expanded "><a href="../concepts/sample_id.html"><strong aria-hidden="true">4.3.5.</strong> Sampling</a></li><li class="chapter-item expanded "><a href="../concepts/pipeline/filtering.html"><strong aria-hidden="true">4.3.6.</strong> Filtering</a></li></ol></li><li class="chapter-item expanded "><a href="../concepts/sql_style.html"><strong aria-hidden="true">4.4.</strong> SQL Style Guide</a></li><li class="chapter-item expanded "><a href="../concepts/index.html"><strong aria-hidden="true">4.5.</strong> Telemetry Behavior Reference</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../concepts/history.html"><strong aria-hidden="true">4.5.1.</strong> History of Telemetry</a></li><li class="chapter-item expanded "><a href="../concepts/profile/index.html"><strong aria-hidden="true">4.5.2.</strong> Profile Behavior</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../concepts/profile/profile_creation.html"><strong aria-hidden="true">4.5.2.1.</strong> Profile Creation</a></li><li class="chapter-item expanded "><a href="../concepts/profile/realworldusage.html"><strong aria-hidden="true">4.5.2.2.</strong> Real World Usage</a></li><li class="chapter-item expanded "><a href="../concepts/profile/profilehistory.html"><strong aria-hidden="true">4.5.2.3.</strong> Profile History</a></li></ol></li><li class="chapter-item expanded "><a href="../concepts/engagement.html"><strong aria-hidden="true">4.5.3.</strong> Engagement metrics</a></li><li class="chapter-item expanded "><a href="../concepts/segments.html"><strong aria-hidden="true">4.5.4.</strong> User states/Segments</a></li></ol></li><li class="chapter-item expanded "><a href="../tools/projects.html"><strong aria-hidden="true">4.6.</strong> Project Glossary</a></li></ol></li><li class="chapter-item expanded "><a href="../datasets/reference.html"><strong aria-hidden="true">5.</strong> Dataset Reference</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../datasets/pings.html"><strong aria-hidden="true">5.1.</strong> Pings</a></li><li class="chapter-item expanded "><a href="../datasets/derived.html"><strong aria-hidden="true">5.2.</strong> Derived Datasets</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../datasets/active_profiles.html"><strong aria-hidden="true">5.2.1.</strong> Active Profiles</a></li><li class="chapter-item expanded "><a href="../datasets/batch_view/addons/reference.html"><strong aria-hidden="true">5.2.2.</strong> Addons</a></li><li class="chapter-item expanded "><a href="../datasets/other/addons_daily/reference.html"><strong aria-hidden="true">5.2.3.</strong> Addons Daily</a></li><li class="chapter-item expanded "><a href="../datasets/other/asn_aggregates/reference.html"><strong aria-hidden="true">5.2.4.</strong> Autonomous System Aggregates</a></li><li class="chapter-item expanded "><a href="../datasets/other/attitudes_daily/reference.html"><strong aria-hidden="true">5.2.5.</strong> Attitudes Daily</a></li><li class="chapter-item expanded "><a href="../datasets/batch_view/clients_daily/reference.html"><strong aria-hidden="true">5.2.6.</strong> Clients Daily</a></li><li class="chapter-item expanded "><a href="../datasets/bigquery/clients_last_seen/reference.html"><strong aria-hidden="true">5.2.7.</strong> Clients Last Seen</a></li><li class="chapter-item expanded "><a href="../datasets/batch_view/events/reference.html"><strong aria-hidden="true">5.2.8.</strong> Events</a></li><li class="chapter-item expanded "><a href="../datasets/bigquery/exact_mau/reference.html"><strong aria-hidden="true">5.2.9.</strong> Exact MAU</a></li><li class="chapter-item expanded "><a href="../datasets/main_ping_tables.html"><strong aria-hidden="true">5.2.10.</strong> Main Ping Tables</a></li><li class="chapter-item expanded "><a href="../datasets/batch_view/main_summary/reference.html"><strong aria-hidden="true">5.2.11.</strong> Main Summary</a></li><li class="chapter-item expanded "><a href="../datasets/other/socorro_crash/reference.html"><strong aria-hidden="true">5.2.12.</strong> Socorro Crash Reports</a></li><li class="chapter-item expanded "><a href="../datasets/other/ssl/reference.html"><strong aria-hidden="true">5.2.13.</strong> SSL Ratios (public)</a></li><li class="chapter-item expanded "><a href="../datasets/batch_view/telemetry_aggregates/reference.html"><strong aria-hidden="true">5.2.14.</strong> Telemetry Aggregates</a></li></ol></li><li class="chapter-item expanded "><a href="../tools/experiments.html"><strong aria-hidden="true">5.3.</strong> Experiment Datasets</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../datasets/jetstream.html"><strong aria-hidden="true">5.3.1.</strong> Jetstream</a></li><li class="chapter-item expanded "><a href="../datasets/heartbeat.html"><strong aria-hidden="true">5.3.2.</strong> Accessing Heartbeat data</a></li><li class="chapter-item expanded "><a href="../datasets/shield.html"><strong aria-hidden="true">5.3.3.</strong> Accessing Shield Study data</a></li><li class="chapter-item expanded "><a href="../datasets/dynamic_telemetry.html"><strong aria-hidden="true">5.3.4.</strong> Dynamic telemetry</a></li><li class="chapter-item expanded "><a href="../datasets/experiment_monitoring.html"><strong aria-hidden="true">5.3.5.</strong> Experiment monitoring</a></li></ol></li><li class="chapter-item expanded "><a href="../datasets/search.html"><strong aria-hidden="true">5.4.</strong> Search Datasets</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../datasets/search/search_aggregates/reference.html"><strong aria-hidden="true">5.4.1.</strong> Search Aggregates</a></li><li class="chapter-item expanded "><a href="../datasets/search/search_clients_daily/reference.html"><strong aria-hidden="true">5.4.2.</strong> Search Clients Daily</a></li><li class="chapter-item expanded "><a href="../datasets/search/search_clients_last_seen/reference.html"><strong aria-hidden="true">5.4.3.</strong> Search Clients Last Seen</a></li><li class="chapter-item expanded "><a href="../datasets/search/client_ltv/reference.html"><strong aria-hidden="true">5.4.4.</strong> Client LTV</a></li></ol></li><li class="chapter-item expanded "><a href="../datasets/non_desktop.html"><strong aria-hidden="true">5.5.</strong> Non-Desktop Datasets</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../datasets/non_desktop/day_2_7_activation/reference.html"><strong aria-hidden="true">5.5.1.</strong> Day 2-7 Activation</a></li><li class="chapter-item expanded "><a href="../datasets/non_desktop/google_play_store/reference.html"><strong aria-hidden="true">5.5.2.</strong> Google Play Store</a></li><li class="chapter-item expanded "><a href="../datasets/non_desktop/apple_app_store/reference.html"><strong aria-hidden="true">5.5.3.</strong> Apple App Store</a></li><li class="chapter-item expanded "><a href="../datasets/non_desktop/events_daily/reference.html"><strong aria-hidden="true">5.5.4.</strong> Events Daily</a></li></ol></li><li class="chapter-item expanded "><a href="../datasets/other.html"><strong aria-hidden="true">5.6.</strong> Other Datasets</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../datasets/other/hgpush/reference.html"><strong aria-hidden="true">5.6.1.</strong> hgpush</a></li><li class="chapter-item expanded "><a href="../datasets/other/stub_installer/reference.html"><strong aria-hidden="true">5.6.2.</strong> Stub installer ping</a></li><li class="chapter-item expanded "><a href="../datasets/other/activity-stream/reference.html"><strong aria-hidden="true">5.6.3.</strong> Activity Stream</a></li><li class="chapter-item expanded "><a href="../datasets/other/bmobugs/reference.html"><strong aria-hidden="true">5.6.4.</strong> bmobugs</a></li></ol></li><li class="chapter-item expanded "><a href="../datasets/fxa.html"><strong aria-hidden="true">5.7.</strong> Firefox Accounts Datasets</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../datasets/fxa_metrics/attribution.html"><strong aria-hidden="true">5.7.1.</strong> Firefox Account Attribution</a></li><li class="chapter-item expanded "><a href="../datasets/fxa_metrics/funnels.html"><strong aria-hidden="true">5.7.2.</strong> Firefox Account Funnel Metrics</a></li><li class="chapter-item expanded "><a href="../datasets/fxa_metrics/emails.html"><strong aria-hidden="true">5.7.3.</strong> Firefox Account Email Metrics</a></li></ol></li><li class="chapter-item expanded "><a href="../datasets/static.html"><strong aria-hidden="true">5.8.</strong> Static Datasets</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../datasets/static/normalized_os.html"><strong aria-hidden="true">5.8.1.</strong> Normalized OS Names And Versions</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../historical/index.html"><strong aria-hidden="true">6.</strong> Historical Reference</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../concepts/pipeline/data_pipeline.html"><strong aria-hidden="true">6.1.</strong> Previous AWS Pipeline Overview</a></li><li class="chapter-item expanded "><a href="../concepts/pipeline/data_pipeline_detail.html"><strong aria-hidden="true">6.2.</strong> In-depth AWS Data Pipeline Detail</a></li><li class="chapter-item expanded "><a href="../concepts/censuses.html"><strong aria-hidden="true">6.3.</strong> Legacy Census Metrics</a></li><li class="chapter-item expanded "><a href="../datasets/obsolete.html"><strong aria-hidden="true">6.4.</strong> Obsolete Datasets</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../datasets/obsolete/churn/reference.html"><strong aria-hidden="true">6.4.1.</strong> Churn</a></li><li class="chapter-item expanded "><a href="../datasets/obsolete/client_count/reference.html"><strong aria-hidden="true">6.4.2.</strong> Client Count</a></li><li class="chapter-item expanded "><a href="../datasets/obsolete/client_count_daily/reference.html"><strong aria-hidden="true">6.4.3.</strong> Client Count Daily</a></li><li class="chapter-item expanded "><a href="../datasets/obsolete/crash_aggregates/reference.html"><strong aria-hidden="true">6.4.4.</strong> Crash Aggregates</a></li><li class="chapter-item expanded "><a href="../datasets/obsolete/crash_summary/reference.html"><strong aria-hidden="true">6.4.5.</strong> Crash Summary</a></li><li class="chapter-item expanded "><a href="../datasets/obsolete/error_aggregates/reference.html"><strong aria-hidden="true">6.4.6.</strong> Error Aggregates</a></li><li class="chapter-item expanded "><a href="../datasets/obsolete/first_shutdown_summary/reference.html"><strong aria-hidden="true">6.4.7.</strong> First Shutdown Summary</a></li><li class="chapter-item expanded "><a href="../datasets/obsolete/heavy_users/reference.html"><strong aria-hidden="true">6.4.8.</strong> Heavy Users</a></li><li class="chapter-item expanded "><a href="../datasets/obsolete/longitudinal/reference.html"><strong aria-hidden="true">6.4.9.</strong> Longitudinal</a></li><li class="chapter-item expanded "><a href="../datasets/obsolete/retention/reference.html"><strong aria-hidden="true">6.4.10.</strong> Retention</a></li><li class="chapter-item expanded "><a href="../datasets/obsolete/sync_summary/reference.html"><strong aria-hidden="true">6.4.11.</strong> Sync Summary</a></li><li class="chapter-item expanded "><a href="../datasets/obsolete/update/reference.html"><strong aria-hidden="true">6.4.12.</strong> Update</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../contributing/index.html"><strong aria-hidden="true">7.</strong> Contributing</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../contributing/style_guide.html"><strong aria-hidden="true">7.1.</strong> Style Guide</a></li><li class="chapter-item expanded "><a href="../contributing/structure.html"><strong aria-hidden="true">7.2.</strong> Structure</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
                 
-
-
-<ul class="summary">
-    
-    
-
-    
-
-    
-        
-        
-    
-        <li class="chapter " data-level="1.1" data-path="../">
-            
-                <a href="../">
-            
-                    
-                    Firefox Data Documentation
-            
-                </a>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter active" data-level="1.1.1" data-path="terminology.html">
-            
-                <a href="terminology.html">
-            
-                    
-                    Terminology
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="1.2" data-path="getting_started.html">
-            
-                <a href="getting_started.html">
-            
-                    
-                    Getting Started
-            
-                </a>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.2.1" data-path="analysis_intro.html">
-            
-                <a href="analysis_intro.html">
-            
-                    
-                    Analysis Quick Start
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.2.2" data-path="data_privacy.html">
-            
-                <a href="data_privacy.html">
-            
-                    
-                    Data Privacy
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.2.3" data-path="choosing_a_dataset.html">
-            
-                <a href="choosing_a_dataset.html">
-            
-                    
-                    Choosing a Dataset
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.2.4" data-path="../tools/stmo.html">
-            
-                <a href="../tools/stmo.html">
-            
-                    
-                    Intro to STMO / Re:dash
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.2.5" data-path="analysis_gotchas.html">
-            
-                <a href="analysis_gotchas.html">
-            
-                    
-                    Common Analysis Gotchas
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.2.6" data-path="review.html">
-            
-                <a href="review.html">
-            
-                    
-                    Getting Review
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3" data-path="../datasets/">
-            
-                <a href="../datasets/">
-            
-                    
-                    Data Collection and Datasets
-            
-                </a>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.3.1" >
-            
-                <span>
-            
-                    
-                    Understanding our Data
-            
-                </span>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.3.1.1" data-path="choosing_a_dataset.html">
-            
-                <a href="choosing_a_dataset.html">
-            
-                    
-                    Choosing a dataset
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3.1.2" data-path="analysis_gotchas.html">
-            
-                <a href="analysis_gotchas.html">
-            
-                    
-                    Common Analysis Gotchas
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3.2" data-path="../datasets/new_data.html">
-            
-                <a href="../datasets/new_data.html">
-            
-                    
-                    Collecting New Data
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3.3" data-path="../datasets/reference.html">
-            
-                <a href="../datasets/reference.html">
-            
-                    
-                    Dataset Reference
-            
-                </a>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.3.3.1" data-path="../datasets/pings.html">
-            
-                <a href="../datasets/pings.html">
-            
-                    
-                    Pings
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3.3.2" data-path="../datasets/derived.html">
-            
-                <a href="../datasets/derived.html">
-            
-                    
-                    Derived Datasets
-            
-                </a>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.3.3.2.1" data-path="../datasets/batch_view/longitudinal/reference.html">
-            
-                <a href="../datasets/batch_view/longitudinal/reference.html">
-            
-                    
-                    Longitudinal
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3.3.2.2" data-path="../datasets/batch_view/cross_sectional/reference.html">
-            
-                <a href="../datasets/batch_view/cross_sectional/reference.html">
-            
-                    
-                    Cross Sectional
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3.3.2.3" data-path="../datasets/batch_view/main_summary/reference.html">
-            
-                <a href="../datasets/batch_view/main_summary/reference.html">
-            
-                    
-                    Main Summary
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3.3.2.4" data-path="../datasets/batch_view/crash_summary/reference.html">
-            
-                <a href="../datasets/batch_view/crash_summary/reference.html">
-            
-                    
-                    Crash Summary
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3.3.2.5" data-path="../datasets/batch_view/crash_aggregates/reference.html">
-            
-                <a href="../datasets/batch_view/crash_aggregates/reference.html">
-            
-                    
-                    Crash Aggregate
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3.3.2.6" data-path="../datasets/batch_view/events/reference.html">
-            
-                <a href="../datasets/batch_view/events/reference.html">
-            
-                    
-                    Events
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3.3.2.7" data-path="../datasets/batch_view/sync_summary/reference.html">
-            
-                <a href="../datasets/batch_view/sync_summary/reference.html">
-            
-                    
-                    Sync Summary
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3.3.2.8" data-path="../datasets/batch_view/addons/reference.html">
-            
-                <a href="../datasets/batch_view/addons/reference.html">
-            
-                    
-                    Addons
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3.3.2.9" data-path="../datasets/batch_view/client_count/reference.html">
-            
-                <a href="../datasets/batch_view/client_count/reference.html">
-            
-                    
-                    Client Count
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3.3.3" data-path="../tools/experiments.html">
-            
-                <a href="../tools/experiments.html">
-            
-                    
-                    Experimental Datasets
-            
-                </a>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.3.3.3.1" data-path="../datasets/shield.html">
-            
-                <a href="../datasets/shield.html">
-            
-                    
-                    Accessing Shield Study data
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4" data-path="../tools/">
-            
-                <a href="../tools/">
-            
-                    
-                    Tools
-            
-                </a>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.4.1" data-path="data_pipeline.html">
-            
-                <a href="data_pipeline.html">
-            
-                    
-                    Overview of Mozilla's Data Pipeline
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4.2" data-path="../tools/interfaces.html">
-            
-                <a href="../tools/interfaces.html">
-            
-                    
-                    Interfaces
-            
-                </a>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.4.2.1" data-path="analysis_intro.html">
-            
-                <a href="analysis_intro.html">
-            
-                    
-                    TMO & STMO
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4.2.2" data-path="../tools/advanced_analysis_with_atmo.html">
-            
-                <a href="../tools/advanced_analysis_with_atmo.html">
-            
-                    
-                    Advanced analysis with ATMO
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4.2.3" data-path="../cookbooks/realtime_analysis_plugin.html">
-            
-                <a href="../cookbooks/realtime_analysis_plugin.html">
-            
-                    
-                    Creating a Real-time Analysis Plugin
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4.2.4" data-path="../tools/distribution_viewer.html">
-            
-                <a href="../tools/distribution_viewer.html">
-            
-                    
-                    Distribution Viewer
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4.2.5" data-path="../tools/hbase.html">
-            
-                <a href="../tools/hbase.html">
-            
-                    
-                    HBase
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4.2.6" data-path="../tools/rtmo.html">
-            
-                <a href="../tools/rtmo.html">
-            
-                    
-                    RTMO
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="1.5" data-path="../cookbooks/">
-            
-                <a href="../cookbooks/">
-            
-                    
-                    Cookbooks
-            
-                </a>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.5.1" data-path="../cookbooks/parquet.html">
-            
-                <a href="../cookbooks/parquet.html">
-            
-                    
-                    Working with Parquet Data on ATMO Clusters
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.5.2" data-path="../cookbooks/create_a_dataset.html">
-            
-                <a href="../cookbooks/create_a_dataset.html">
-            
-                    
-                    Creating a custom re:dash dataset
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.5.3" data-path="../cookbooks/realtime_analysis_plugin.html">
-            
-                <a href="../cookbooks/realtime_analysis_plugin.html">
-            
-                    
-                    Creating a Real-time Analysis Plugin
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.5.4" data-path="../cookbooks/longitudinal_examples.html">
-            
-                <a href="../cookbooks/longitudinal_examples.html">
-            
-                    
-                    Longitudinal Examples
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-
-    
-        
-        <li class="divider"></li>
-        
-        
-    
-        <li class="chapter " data-level="2.1" >
-            
-                <span>
-            
-                    
-                    About this Documentation
-            
-                </span>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="2.1.1" data-path="../meta/structure.html">
-            
-                <a href="../meta/structure.html">
-            
-                    
-                    Structure
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="2.1.2" data-path="../meta/contributing.html">
-            
-                <a href="../meta/contributing.html">
-            
-                    
-                    Contributing
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-
-    
-
-    <li class="divider"></li>
-
-    <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
-        </a>
-    </li>
-</ul>
-
-
-                </nav>
-            
-        
-    </div>
-
-    <div class="book-body">
-        
-            <div class="body-inner">
-                
-                    
-
-<div class="book-header" role="navigation">
-    
-
-    <!-- Title -->
-    <h1>
-        <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Terminology</a>
-    </h1>
-</div>
-
-
-
-
-                    <div class="page-wrapper" tabindex="-1" role="main">
-                        <div class="page-inner">
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
-                                <h1 id="terminology">Terminology</h1>
-<ul>
-<li><strong>Analyst</strong>: Someone performing analysis.
-This is more general than <strong>data scientist</strong>.</li>
-<li><strong>Ping</strong>: </li>
-<li><strong>Dataset</strong>: A set of data, includes ping data, derived datasets, etc...</li>
-<li><strong>Derived Dataset</strong>: A processed dataset, such as <code>main_summary</code> or the 
-<code>longitudinal</code> dataset</li>
-<li>...</li>
-</ul>
-
-                                
-                                </section>
-                            
-    </div>
-    <div class="search-results">
-        <div class="has-results">
-            
-            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
-            <ul class="search-results-list"></ul>
-            
-        </div>
-        <div class="no-results">
-            
-            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
-            
-        </div>
-    </div>
-</div>
-
-                        </div>
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
                     </div>
+
+                    <h1 class="menu-title">Mozilla Data Documentation</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                        <a href="https://github.com/mozilla/data-docs" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
                 
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#terminology" id="terminology">Terminology</a></h1>
+<h2><a class="header" href="#table-of-contents" id="table-of-contents">Table of Contents</a></h2>
+<p>This glossary provides definitions for commonly-used terms at Mozilla.</p>
+<ul>
+<li><a href="#aet">AET</a></li>
+<li><a href="#analyst">Analyst</a></li>
+<li><a href="#amplitude">Amplitude</a></li>
+<li><a href="#bigquery">BigQuery</a></li>
+<li><a href="#client-id">Client ID</a></li>
+<li><a href="#data-analyst">Data Analyst</a></li>
+<li><a href="#data-engineer">Data Engineer</a></li>
+<li><a href="#data-practitioner">Data Practitioner</a></li>
+<li><a href="#data-scientist">Data Scientist</a></li>
+<li><a href="#dataset">Dataset</a></li>
+<li><a href="#dau">DAU</a></li>
+<li><a href="#derived-dataset">Derived Dataset</a></li>
+<li><a href="#glean">Glean</a></li>
+<li><a href="#gcp">GCP</a></li>
+<li><a href="#geoip">GeoIP</a></li>
+<li><a href="#ingestion">Ingestion</a></li>
+<li><a href="#intensity">Intensity</a></li>
+<li><a href="#metric">Metric</a></li>
+<li><a href="#mau">MAU</a></li>
+<li><a href="#ping">Ping</a></li>
+<li><a href="#ping-table">Ping Table</a></li>
+<li><a href="#pipeline">Pipeline</a></li>
+<li><a href="#probe">Probe</a></li>
+<li><a href="#profile">Profile</a></li>
+<li><a href="#query">Query</a></li>
+<li><a href="#retention">Retention</a></li>
+<li><a href="#schema">Schema</a></li>
+<li><a href="#session">Session</a></li>
+<li><a href="#subsession">Subsession</a></li>
+<li><a href="#stmo-sqltelemetrymozillaorg">STMO (sql.telemetry.mozilla.org)</a></li>
+<li><a href="#telemetry">Telemetry</a>
+<ul>
+<li><a href="#wau">WAU</a></li>
+</ul>
+</li>
+</ul>
+<h2><a class="header" href="#aet" id="aet">AET</a></h2>
+<p>Account Ecosystem Telemetry; see the <a href="https://docs.google.com/document/d/1yRLiD8JuaZIIaKhs6DhXEa7aH8jwOau5yW0kHaldFQU/edit#">PRD</a></p>
+<h2><a class="header" href="#analyst" id="analyst">Analyst</a></h2>
+<p>See <a href="#data-analyst">Data Analyst</a>.</p>
+<h2><a class="header" href="#amplitude" id="amplitude">Amplitude</a></h2>
+<p>A third-party product used by several teams within Mozilla for analysis of user events.</p>
+<h2><a class="header" href="#bigquery" id="bigquery">BigQuery</a></h2>
+<p><a href="https://cloud.google.com/bigquery">BigQuery</a> is Google Cloud's managed data warehouse. Most of the data described on this site is stored and queried using BigQuery. See <a href="../cookbooks/bigquery.html">Accessing and working with BigQuery</a> for more details.</p>
+<h2><a class="header" href="#client-id" id="client-id">Client ID</a></h2>
+<p>A unique id identifying the client who sent a <a href="#ping">ping</a>.</p>
+<h2><a class="header" href="#data-analyst" id="data-analyst">Data Analyst</a></h2>
+<p>This is a common job title for someone who spends a large amount of their time analyzing data. At Mozilla, we tend not to use this term or title, favoring <a href="#data-practitioner">Data Practitioner</a> or <a href="#data-scientist">Data Scientist</a> instead.</p>
+<h2><a class="header" href="#data-engineer" id="data-engineer">Data Engineer</a></h2>
+<p>A &quot;Data Engineer&quot; at Mozilla generally refers to someone on the Data Engineering team. They implement and maintain the data platform and tools described in this document. They may also assist data scientists or other data practitioners, as needed.</p>
+<h2><a class="header" href="#data-practitioner" id="data-practitioner">Data Practitioner</a></h2>
+<p>A data practitioner is someone who looks at data, identifies trends and other qualitative measurements in them, and creates charts and dashboards. It could be anyone: engineer, product manager, data engineer or data scientist.</p>
+<h2><a class="header" href="#data-scientist" id="data-scientist">Data Scientist</a></h2>
+<p>A &quot;Data Scientist&quot; at Mozilla generally refers to someone on the Data Science team. They have a broad array of technical backgrounds and a core set of common professional skills:</p>
+<ul>
+<li>applying statistical methods to noisy data to answer questions about what, how, or why something is happening</li>
+<li>transform unstructured data into usable metrics and models</li>
+<li>augmenting strategic product and decision-making with empirical evidence created and curated by the team</li>
+</ul>
+<h2><a class="header" href="#dataset" id="dataset">Dataset</a></h2>
+<p>A set of data, which includes ping data, derived datasets, etc.; sometimes it is used synonymously with “table”; sometimes it is used technically to refer to a <a href="#bigquery">BigQuery</a> dataset, which represents a container for one or more tables.</p>
+<h2><a class="header" href="#dau" id="dau">DAU</a></h2>
+<p>The number of unique profiles active on each day.</p>
+<h2><a class="header" href="#derived-dataset" id="derived-dataset">Derived Dataset</a></h2>
+<p>A processed dataset, such as <a href="../datasets/batch_view/clients_daily/reference.html">Clients Daily</a>. At Mozilla, this is in contrast to a raw ping table which represents (more or less) the raw data submitted by our users.</p>
+<h2><a class="header" href="#glean" id="glean">Glean</a></h2>
+<p>Glean is Mozilla’s product analytics &amp; telemetry solution that provides a consistent experience and behavior across all of our products. Most of Mozilla's mobile apps, including Fenix, have been adapted to use the Glean SDK. For more information, see the <a href="./glean/glean.html">Glean Overview</a>.</p>
+<h2><a class="header" href="#gcp" id="gcp">GCP</a></h2>
+<p>Google Cloud Platform (GCP) is a suite of cloud-computing services that runs on the same infrastructure that Google uses internally for its end-user products.</p>
+<h2><a class="header" href="#geoip" id="geoip">GeoIP</a></h2>
+<p>IP Geolocation involves attempting to discover the location of an IP address in the real world. IP addresses are assigned to an organization, and as these are ever-changing associations, it can be difficult to determine exactly where in the world an IP address is located. Mozilla’s ingestion infrastructure attempts to perform GeoIP lookup during the data decoding process and subsequently discards the IP address before the message arrives in long-term storage.</p>
+<h2><a class="header" href="#ingestion" id="ingestion">Ingestion</a></h2>
+<p>Mozilla's core data platform has been built to support structured ingestion of arbitrary JSON payloads whether they come from browser products on client devices or from server-side applications that have nothing to do with Firefox; any team at Mozilla can hook into structured ingestion by defining a schema and registering it with pipeline. Once a schema is registered, everything else is automatically provisioned, from an HTTPS endpoint for accepting payloads to a set of tables in BigQuery for holding the processed data.</p>
+<h2><a class="header" href="#intensity" id="intensity">Intensity</a></h2>
+<p>Intuitively, how many days per week do users use the product? Among profiles active at least once in the week ending on the date specified, the number of days on average they were active during that one-week window.</p>
+<h2><a class="header" href="#metric" id="metric">Metric</a></h2>
+<p>A metric is anything that you want to (and can) measure. This differs from a dimension which is a qualitative attribute of data.</p>
+<h2><a class="header" href="#mau" id="mau">MAU</a></h2>
+<p>Monthly Active Users - the number of unique profiles active in the 28-day period ending on a given day. The number of unique profiles active at least once during the 28-day window
+ending on the specified day.</p>
+<h2><a class="header" href="#ping" id="ping">Ping</a></h2>
+<p>A ping represents a message that is sent from the Firefox browser to Mozilla’s Telemetry servers. It typically includes information about the browser’s state, user actions, etc.
+<a href="https://firefox-source-docs.mozilla.org/toolkit/components/telemetry/telemetry/data/common-ping.html">for more details</a></p>
+<h2><a class="header" href="#ping-table" id="ping-table">Ping Table</a></h2>
+<p>A set of pings that is stored in a BigQuery table. See article on <a href="../datasets/pings.html">raw ping datasets</a>.</p>
+<h2><a class="header" href="#pipeline" id="pipeline">Pipeline</a></h2>
+<p>Mozilla’s data pipeline, which is used to collect Telemetry data from Mozilla’s products and logs from various services.
+The bulk of the data that is handled by this pipeline is Firefox Telemetry data. The same tool-chain is used to collect, store, and analyze data that comes from many sources.</p>
+<p>For more information, see <a href="./pipeline/gcp_data_pipeline.html">An overview of Mozilla’s Data Pipeline</a>.</p>
+<h2><a class="header" href="#probe" id="probe">Probe</a></h2>
+<p>Measurements for a specific aspect of Firefox are called probes. A single telemetry ping sends many different probes. Probes are either Histograms (recording distributions of data points) or Scalars (recording a single value).</p>
+<p>You can search for details about probes by using the <a href="https://probes.telemetry.mozilla.org/">Probe Dictionary</a>. For each probe, the probe dictionary provides:</p>
+<ul>
+<li>A description of the probe</li>
+<li>When a probe started being collected</li>
+<li>Whether data from this probe is collected in the release channel</li>
+</ul>
+<h2><a class="header" href="#profile" id="profile">Profile</a></h2>
+<p>All of the changes a user makes in Firefox, like the home page, what toolbars you use, installed addons, saved passwords and your bookmarks, are all stored in a special folder, called a profile. Telemetry stores archived and pending pings in the profile directory as well as metadata like the <a href="#client-id">client id</a>. See also <a href="./profile/profile_creation.html">Profile Creation</a></p>
+<h2><a class="header" href="#query" id="query">Query</a></h2>
+<p>Typically refers to a query written in the SQL syntax, run on (for example) <a href="#stmo">STMO</a>.</p>
+<h2><a class="header" href="#retention" id="retention">Retention</a></h2>
+<ul>
+<li>
+<p>As in “Data retention” - how long data is stored before it is automatically deleted/archived</p>
+</li>
+<li>
+<p>As in “User retention” - how likely is a user to continue using a product</p>
+</li>
+</ul>
+<h2><a class="header" href="#schema" id="schema">Schema</a></h2>
+<p>A schema is the organization or structure for our data. We use schemas at many levels (in data ingestion and storage) to make sure the data we submit is valid and possible to be processed efficiently.</p>
+<h2><a class="header" href="#session" id="session">Session</a></h2>
+<p>The period of time that it takes between Firefox being started until it is shut down. See also <a href="#subsession">subsession</a>.</p>
+<h2><a class="header" href="#subsession" id="subsession">Subsession</a></h2>
+<p>In Firefox, <a href="#sessions">Sessions</a> are split into subsessions after every 24-hour time period has passed or the environment has changed.
+(<a href="https://firefox-source-docs.mozilla.org/toolkit/components/telemetry/telemetry/concepts/sessions.html?highlight=subsession">for more details</a>)</p>
+<h2><a class="header" href="#stmo-sqltelemetrymozillaorg" id="stmo-sqltelemetrymozillaorg">STMO (sql.telemetry.mozilla.org)</a></h2>
+<p>A service for creating queries and dashboards. See <a href="../tools/interfaces.html#sqltelemetrymozillaorg-stmo">STMO under analysis tools</a>.</p>
+<h2><a class="header" href="#telemetry" id="telemetry">Telemetry</a></h2>
+<p>As you use Firefox, Telemetry measures and collects non-personal information, such as performance, hardware, usage and customizations. It then sends this information to Mozilla on a daily basis and we use it to improve Firefox.</p>
+<h3><a class="header" href="#wau" id="wau">WAU</a></h3>
+<p>The number of unique profiles active at least once during the 7-day window
+ending on the specified day.</p>
+<footer id="open-on-gh">Found a bug? <a href="https://github.com/mozilla/data-docs/edit/master/src/concepts/terminology.md">Edit this file on GitHub.</a></footer>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../concepts/getting_started.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../concepts/gaining_access.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
             </div>
 
-            
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                <a href="../" class="navigation navigation-prev " aria-label="Previous page: Firefox Data Documentation">
-                    <i class="fa fa-angle-left"></i>
-                </a>
+                    <a rel="prev" href="../concepts/getting_started.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
                 
-                
-                <a href="getting_started.html" class="navigation navigation-next " aria-label="Next page: Getting Started">
-                    <i class="fa fa-angle-right"></i>
-                </a>
-                
-            
-        
-    </div>
 
-    <script>
-        var gitbook = gitbook || [];
-        gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Terminology","level":"1.1.1","depth":2,"next":{"title":"Getting Started","level":"1.2","depth":1,"path":"concepts/getting_started.md","ref":"concepts/getting_started.md","articles":[{"title":"Analysis Quick Start","level":"1.2.1","depth":2,"path":"concepts/analysis_intro.adoc","ref":"concepts/analysis_intro.adoc","articles":[]},{"title":"Data Privacy","level":"1.2.2","depth":2,"path":"concepts/data_privacy.md","ref":"concepts/data_privacy.md","articles":[]},{"title":"Choosing a Dataset","level":"1.2.3","depth":2,"path":"concepts/choosing_a_dataset.md","ref":"concepts/choosing_a_dataset.md","articles":[]},{"title":"Intro to STMO / Re:dash","level":"1.2.4","depth":2,"path":"tools/stmo.md","ref":"tools/stmo.md","articles":[]},{"title":"Common Analysis Gotchas","level":"1.2.5","depth":2,"path":"concepts/analysis_gotchas.md","ref":"concepts/analysis_gotchas.md","articles":[]},{"title":"Getting Review","level":"1.2.6","depth":2,"path":"concepts/review.md","ref":"concepts/review.md","articles":[]}]},"previous":{"title":"Firefox Data Documentation","level":"1.1","depth":1,"path":"introduction.md","ref":"introduction.md","articles":[{"title":"Terminology","level":"1.1.1","depth":2,"path":"concepts/terminology.md","ref":"concepts/terminology.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toc"],"pluginsConfig":{"toc":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"concepts/terminology.md","mtime":"2017-04-04T14:22:12.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-08T13:00:23.032Z"},"basePath":"..","book":{"language":""}});
-        });
-    </script>
-</div>
+                
+                    <a rel="next" href="../concepts/gaining_access.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
 
         
-    <script src="../gitbook/gitbook.js"></script>
-    <script src="../gitbook/theme.js"></script>
-    
+
         
-        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        <!-- Google Analytics Tag -->
+        <script type="text/javascript">
+            var localAddrs = ["localhost", "127.0.0.1", ""];
+
+            // make sure we don't activate google analytics if the developer is
+            // inspecting the book locally...
+            if (localAddrs.indexOf(document.location.hostname) === -1) {
+                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                ga('create', 'UA-104326577-1', 'auto');
+                ga('send', 'pageview');
+            }
+        </script>
         
-    
+
         
-        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+
         
-    
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
         
-        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+
         
-    
+
         
-        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
         
-    
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
         
-        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        <script type="text/javascript" src="../mermaid.min.js"></script>
         
-    
+        <script type="text/javascript" src="../mermaid-init.js"></script>
         
-        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+
         
-    
 
     </body>
 </html>
-
